@@ -11,7 +11,7 @@
     <groupId>com.example</groupId>
     <artifactId>PetShop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>PetShop</name>
     <description>PetShop</description>
     <url/>
@@ -51,7 +51,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
