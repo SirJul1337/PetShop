@@ -21,4 +21,4 @@ jobs:
         context: .
         file: ./DockerfileJar
         push: true
-        tags: docker.pkg.github.com/sirjul1337/petshop:latest
+        tags: docker.pkg.github.com/sirjul1337/petshop/petshop:latest
