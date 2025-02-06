@@ -23,13 +23,6 @@ public class PetService{
         return _petRepo.findByNameIgnoreCase(name);
     }
 
-    public Animal[] GetAllAnimalsInCage(Integer cageId) {
-        return new Animal[0];
-    }
-
-    public Animal[] GetAllAnimalsByRace(Integer raceId) {
-        return new Animal[0];
-    }
 
     public List<Animal> GetAllAnimals() {
         return _petRepo.findAll();
@@ -40,10 +33,6 @@ public class PetService{
     }
 
     public void RemoveAnimal(Integer id) {
-
-    }
-
-    public Cage[] GetAllCages() {
-        return new Cage[0];
+        _petRepo.deleteById(id);
     }
 }

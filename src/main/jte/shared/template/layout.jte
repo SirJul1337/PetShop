@@ -15,6 +15,7 @@
                 <a href="/" class="text-gray-300 hover:text-white px-3 py-2">Animals</a>
                 <a href="/stats" class="text-gray-300 hover:text-white px-3 py-2">Stats</a>
                 <a href="/cages" class="text-gray-300 hover:text-white px-3 py-2">Cages</a>
+                <a href="/species" class="text-gray-300 hover:text-white px-3 py-2">Species</a>
             </div>
         </div>
     </div>

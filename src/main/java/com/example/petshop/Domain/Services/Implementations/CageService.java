@@ -17,4 +17,7 @@ public class CageService {
     public void AddCage(Cage cage) {
         _cageRepository.save(cage);
     }
+    public List<Cage> GetAllCagesWithSpace(){
+        return _cageRepository.findCagesWithAvailableSpace();
+    }
 }

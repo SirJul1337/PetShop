@@ -19,4 +19,7 @@ public class RaceService {
     public Race GetRaceById(int id) {
         return _raceRepository.findById(id);
     }
+    public void AddRace(Race race) {
+        _raceRepository.save(race);
+    }
 }

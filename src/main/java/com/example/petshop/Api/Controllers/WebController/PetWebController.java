@@ -8,9 +8,7 @@ import com.example.petshop.Domain.Services.Implementations.RaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -39,12 +37,12 @@ public class PetWebController {
                 ));
         model.addAttribute("animals", animals);
         model.addAttribute("raceNames", raceNames);
-        return "animal/animals";
+        return "animal/overview";
     }
 
     @GetMapping("/add-animal")
     public String showAddForm(Model model) {
-        model.addAttribute("cages", _cageService.GetAllCages());
+        model.addAttribute("cages", _cageService.GetAllCagesWithSpace());
         model.addAttribute("races", _raceService.GetAllRaces());
         return "animal/add-animal";
     }
@@ -52,6 +50,11 @@ public class PetWebController {
     @PostMapping("/animals")
     public String addAnimal(@ModelAttribute Animal animal) {
         _petService.AddAnimal(animal);
+        return "redirect:/";
+    }
+    @PostMapping("/delete-animal")
+    public String deleteAnimal(@RequestParam Integer id) {
+        _petService.RemoveAnimal(id);
         return "redirect:/";
     }
 
