@@ -21,4 +21,4 @@ jobs:
         context: .
         file: ./DockerfileJar
         push: true
-        tags: ghcr.io/sirjul1337/petshop:latest
+        tags: ghcr.io/sirjul1337/petshop:${{ github.run_number }}
