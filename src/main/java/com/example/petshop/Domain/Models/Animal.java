@@ -9,8 +9,8 @@ public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private  String name;
-    private  int birthYear;
+    private String name;
+    private int birthYear;
     private int raceId;
     private int cageId;
 
@@ -28,7 +28,9 @@ public class Animal {
 
 
     public String getName() { return name; }
-    public int getAge() { return birthYear; }
+    public void setName(String name) { this.name = name; }
+    public int getBirthYear() { return birthYear; }
+    public void setBirthYear(int birthYear) { this.birthYear = birthYear; }
     public int getRaceId() { return raceId; }
     public void setRaceId(int raceId) { this.raceId = raceId; }
     public int getCageId() { return cageId; }
@@ -41,4 +43,5 @@ public class Animal {
     public Integer getId() {
         return id;
     }
+
 }
