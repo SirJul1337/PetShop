@@ -1,0 +1,22 @@
+CREATE TABLE Races (
+id SERIAL PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+max_age INT NOT NULL
+);
+
+CREATE TABLE Cages (
+id SERIAL PRIMARY KEY,
+size INT NOT NULL,
+race_id INT NOT NULL,
+FOREIGN KEY (race_id) REFERENCES Races(id)
+);
+
+CREATE TABLE Animals (
+id SERIAL PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+birth_year INT NOT NULL,
+race_id INT NOT NULL,
+cage_id INT NOT NULL,
+FOREIGN KEY (race_id) REFERENCES Races(id),
+FOREIGN KEY (cage_id) REFERENCES Cages(id)
+);

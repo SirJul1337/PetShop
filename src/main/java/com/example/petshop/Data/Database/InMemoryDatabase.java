@@ -1,6 +1,6 @@
-package com.example.petshop.Database;
+package com.example.petshop.Data.Database;
 
-import com.example.petshop.Models.Animal;
+import com.example.petshop.Domain.Models.Animal;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
